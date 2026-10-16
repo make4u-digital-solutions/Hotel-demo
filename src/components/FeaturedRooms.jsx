@@ -4,68 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Maximize2, Users, Bed, Sparkles, Check } from "lucide-react";
 
-export const ROOMS_DATA = [
-  {
-    id: "deluxe-garden",
-    name: "Deluxe Garden Room",
-    tagline: "Intimate Haven Amongst the Blooms",
-    description: "Sunlit sanctuary featuring high timber ceilings, a private veranda facing coffee blossoms, and a deep soaking bath.",
-    size: "45 sq.m / 485 sq.ft",
-    bed: "1 King Bed",
-    occupancy: "Up to 2 Guests",
-    price: "₹18,500",
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=85",
-    features: ["Private Garden Balcony", "Freestanding Soaking Tub", "Artisanal Coffee & Tea Bar", "Rain Shower"],
-    detailedAmenities: [
-      "Custom 400-thread-count organic cotton linens",
-      "Handmade botanical bath amenities",
-      "Interactive smart climate controls",
-      "High-speed fiber Wi-Fi",
-      "Complimentary morning estate coffee service",
-      "Evening turn-down ritual with herbal tisanes",
-    ],
-  },
-  {
-    id: "heritage-suite",
-    name: "Premium Heritage Suite",
-    tagline: "Timeless Colonial Elegance & Mist Views",
-    description: "Expansive suite with handcrafted teakwood finishes, wood-burning hearth, separate lounge salon, and panoramic valley views.",
-    size: "72 sq.m / 775 sq.ft",
-    bed: "1 King Bed + Daybed",
-    occupancy: "Up to 3 Guests",
-    price: "₹28,000",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85",
-    features: ["Working Fireplace", "Panoramic Valley Balcony", "Separate Living Lounge", "Walk-In Dressing Room"],
-    detailedAmenities: [
-      "Dedicated butler service on call",
-      "Traditional brass soaking tub with plantation view",
-      "Curated estate vinyl record player & library",
-      "Complimentary gourmet fruit and bakery hamper",
-      "Binoculars and stargazing star-chart",
-      "Express laundry service included",
-    ],
-  },
-  {
-    id: "presidential-sanctuary",
-    name: "The Presidential Sanctuary",
-    tagline: "The Pinnacle of Highland Solitude",
-    description: "Our signature two-room estate villa boasting a private heated plunge pool, dining pavilion, secluded garden, and dedicated butler.",
-    size: "120 sq.m / 1,290 sq.ft",
-    bed: "Master King + 2 Queen",
-    occupancy: "Up to 4 Guests",
-    price: "₹48,000",
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=85",
-    features: ["Private Heated Plunge Pool", "Outdoor Open-Air Rain Courtyard", "Private In-Villa Dining", "24/7 Dedicated Butler"],
-    detailedAmenities: [
-      "Chauffeured luxury SUV airport transfers included",
-      "Private alfresco dinner prepared by executive chef",
-      "Daily complimentary 60-min Ayurvedic spa session for two",
-      "Fully stocked artisanal wine and craft pantry",
-      "Private garden meditation gazebo",
-      "Bespoke departure estate gift hamper",
-    ],
-  },
-];
+import Link from "next/link";
+import { ROOMS_DATA } from "@/data/roomsData";
+export { ROOMS_DATA };
 
 export default function FeaturedRooms({ onSelectRoom, onBookRoom }) {
   return (
@@ -185,6 +126,17 @@ export default function FeaturedRooms({ onSelectRoom, onBookRoom }) {
               </div>
             </motion.article>
           ))}
+        </div>
+
+        {/* View All Accommodations Link */}
+        <div className="mt-14 text-center">
+          <Link
+            href="/rooms"
+            className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.16em] font-medium text-[#414C38] hover:text-[#292B27] transition-colors pb-1 border-b border-[#414C38]"
+          >
+            <span>Explore Complete Rooms & Suites Collection</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

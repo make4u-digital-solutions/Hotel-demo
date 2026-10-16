@@ -4,14 +4,16 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight, CalendarDays, Phone } from "lucide-react";
 
+import Link from "next/link";
+
 const NAV_LINKS = [
-  { name: "Home", href: "#home" },
-  { name: "Rooms & Suites", href: "#rooms" },
-  { name: "Experiences", href: "#experiences" },
-  { name: "Dining", href: "#dining" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Rooms & Suites", href: "/rooms" },
+  { name: "Experiences", href: "/#experiences" },
+  { name: "Dining", href: "/#dining" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar({ onOpenBooking }) {
@@ -65,8 +67,8 @@ export default function Navbar({ onOpenBooking }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="group flex flex-col focus:outline-none focus:ring-1 focus:ring-[#78866B] rounded p-1"
             >
               <span className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-[#292B27] font-medium uppercase group-hover:text-[#414C38] transition-colors">
@@ -75,19 +77,19 @@ export default function Navbar({ onOpenBooking }) {
               <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-[#78866B] font-sans -mt-0.5">
                 Heritage Sanctuary • Coorg
               </span>
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-7" aria-label="Main Navigation">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="relative text-[13px] tracking-[0.06em] uppercase font-medium text-[#292B27] hover:text-[#414C38] transition-colors py-1 group"
                 >
                   {link.name}
                   <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#78866B] transition-all duration-300 ease-out group-hover:w-full" />
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -163,7 +165,7 @@ export default function Navbar({ onOpenBooking }) {
               <div className="flex-1 overflow-y-auto px-6 py-6 space-y-4">
                 <nav className="flex flex-col space-y-3">
                   {NAV_LINKS.map((link) => (
-                    <a
+                    <Link
                       key={link.name}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
@@ -171,7 +173,7 @@ export default function Navbar({ onOpenBooking }) {
                     >
                       <span>{link.name}</span>
                       <ArrowRight className="w-4 h-4 text-[#78866B]/60" />
-                    </a>
+                    </Link>
                   ))}
                 </nav>
 

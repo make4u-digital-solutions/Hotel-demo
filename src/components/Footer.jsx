@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowUp, Mail, Phone, MapPin, Compass } from "lucide-react";
 
 export default function Footer() {
@@ -34,34 +35,34 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-[#E9E2D5]/80">
               <li>
-                <a href="#home" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <Link href="/#about" className="hover:text-white transition-colors">
                   Our Story & Heritage
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
+                <Link href="/rooms" className="hover:text-white transition-colors">
                   Rooms & Suites
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#experiences" className="hover:text-white transition-colors">
+                <Link href="/#experiences" className="hover:text-white transition-colors">
                   Experiences & Spa
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#dining" className="hover:text-white transition-colors">
+                <Link href="/#dining" className="hover:text-white transition-colors">
                   Dining & Cellar
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-white transition-colors">
+                <Link href="/#gallery" className="hover:text-white transition-colors">
                   Visual Gallery
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,29 +74,29 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-[#E9E2D5]/80">
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
+                <Link href="/rooms" className="hover:text-white transition-colors">
                   Deluxe Garden Room (45 sq.m)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
+                <Link href="/rooms" className="hover:text-white transition-colors">
                   Premium Heritage Suite (72 sq.m)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
+                <Link href="/rooms" className="hover:text-white transition-colors">
+                  Plantation Family Suite (95 sq.m)
+                </Link>
+              </li>
+              <li>
+                <Link href="/rooms" className="hover:text-white transition-colors">
                   The Presidential Sanctuary (120 sq.m)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
-                  In-Suite Dining & Private Butler
-                </a>
-              </li>
-              <li>
-                <a href="#experiences" className="hover:text-white transition-colors">
+                <Link href="/#experiences" className="hover:text-white transition-colors">
                   Ayurvedic Wellness Pavilion
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

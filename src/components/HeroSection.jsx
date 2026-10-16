@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, MapPin, Compass } from "lucide-react";
 
 export default function HeroSection({ onOpenBooking }) {
@@ -85,13 +86,13 @@ export default function HeroSection({ onOpenBooking }) {
               <ArrowRight className="w-4 h-4 text-[#E9E2D5]" />
             </button>
 
-            <a
-              href="#rooms"
+            <Link
+              href="/rooms"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FFFFFF]/90 hover:bg-[#FFFFFF] text-[#292B27] text-xs sm:text-sm uppercase tracking-[0.16em] font-medium transition-all border border-[#E7E4DC] backdrop-blur-xs"
             >
               <Compass className="w-4 h-4 text-[#78866B]" />
               <span>Explore Our Rooms</span>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>
